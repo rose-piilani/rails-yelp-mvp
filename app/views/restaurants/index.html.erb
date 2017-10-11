@@ -1,11 +1,14 @@
 <div class="container">
   <div class="row">
+    <h1>Yelp MVP</h1>
+    <%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary" %>
     <% @restaurants.each do |restaurant| %>
     <div class="restaurant">
       <hr/>
       <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
-      <p><%= restaurant.category %></p>
-    </div>
+      <p><%= restaurant.category.capitalize %></p>
     <% end %>
+    </div>
   </div>
 </div>
+
